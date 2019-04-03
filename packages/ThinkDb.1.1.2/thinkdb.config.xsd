@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="thinkdb"
+    targetNamespace="http://tempuri.org/thinkdb.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/thinkdb.xsd"
+    xmlns:mstns="http://tempuri.org/thinkdb.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="thinkdb-configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="database-factory" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="database-factory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="property" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+      <xs:attribute name="name" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="property">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="name" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="database.provider_class" />
+                <xs:enumeration value="database.context_class" />
+                <xs:enumeration value="connection.connection_string" />
+                <xs:enumeration value="connection.connection_string_name" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

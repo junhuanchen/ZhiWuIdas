@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="thinklib"
+    targetNamespace="http://tempuri.org/thinklib.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/thinklib.xsd"
+    xmlns:mstns="http://tempuri.org/thinklib.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="thinkcache-configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cache" minOccurs="0" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cache">
+    <xs:complexType>
+      <xs:attribute name="region" use="required" />
+      <xs:attribute name="expiration" type="xs:int" use="optional" />
+      <xs:attribute name="priority" use="optional">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="abovenormal" />
+            <xs:enumeration value="belownormal" />
+            <xs:enumeration value="high" />
+            <xs:enumeration value="low" />
+            <xs:enumeration value="normal" />
+            <xs:enumeration value="notremovable" />
+            <xs:enumeration value="default" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

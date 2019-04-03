@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="thinkdb-configuration" type="ThinkDb.DatabaseSectionHandler, ThinkDb" />
+  </configSections>
+
+  <thinkdb-configuration>
+    <database-factory>
+      <!--数据库驱动-->
+      <!--<property name="database.provider_class">ThinkDb.SqlServerDatabase, ThinkDb</property>-->
+      <!--数据上下文类型 [web,wcf,call,thread]或者实现ICurrentDatabaseContext接口类型-->
+      <property name="database.context_class">thread</property>
+      <!--数据库连接字符串-->
+      <!--<property name="connection.connection_string"></property>-->
+      <!--数据库连接Key-->
+      <property name="connection.connection_string_name">default</property>
+    </database-factory>
+  </thinkdb-configuration>
+</configuration>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="extern">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\..\ZwLib\FrameWork\Core\ZwTransit.c">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ZwLib\FrameWork\DataInterface\Ado\ado2.cpp">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ZwLib\Algorithm\BaseSeven\BaseSeven.c">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ZwLib\Algorithm\CRC\Crc.c">
+      <Filter>extern</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ZwLib\Algorithm\RSA\Rsa.c">
+      <Filter>extern</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
